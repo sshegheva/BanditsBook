@@ -1,15 +1,17 @@
 library("plyr")
 library("ggplot2")
 
-annealing.results <- read.csv("julia/algorithms/epsilon_greedy/annealing_results.csv", header = FALSE)
+lang="python"
+
+annealing.results <- read.csv(paste0(lang, "/algorithms/epsilon_greedy/annealing_results.csv"), header = FALSE)
 names(annealing.results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 annealing.results <- transform(annealing.results, Algorithm = "Annealing epsilon-Greedy")
 
-ucb1.results <- read.csv("julia/algorithms/ucb/ucb1_results.csv", header = FALSE)
+ucb1.results <- read.csv(paste0(lang, "julia/algorithms/ucb/ucb1_results.csv"), header = FALSE)
 names(ucb1.results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 ucb1.results <- transform(ucb1.results, Algorithm = "UCB1")
 
-annealing.softmax.results <- read.csv("julia/algorithms/softmax/annealing_softmax_results.csv", header = FALSE)
+annealing.softmax.results <- read.csv(paste0(lang, "julia/algorithms/softmax/annealing_softmax_results.csv"), header = FALSE)
 names(annealing.softmax.results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 annealing.softmax.results <- transform(annealing.softmax.results, Algorithm = "Annealing Softmax")
 

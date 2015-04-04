@@ -1,7 +1,7 @@
 library("plyr")
 library("ggplot2")
 
-results <- read.csv("julia/algorithms/softmax/standard_softmax_results.csv", header = FALSE)
+results <- read.csv("python/algorithms/softmax/standard_softmax_results.csv", header = FALSE)
 names(results) <- c("Temperature", "Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 results <- transform(results, Temperature = factor(Temperature))
 

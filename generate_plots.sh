@@ -15,14 +15,14 @@
 
 # Use Python for simulations
 
-# cd python
-# python algorithms/epsilon_greedy/test_standard.py
-# python algorithms/epsilon_greedy/test_annealing.py
-# python algorithms/softmax/test_standard.py
-# python algorithms/softmax/test_annealing.py
-# python algorithms/ucb/test_ucb1.py
-# python algorithms/exp3/test_exp3.py
-# cd ..
+ cd python
+ python algorithms/epsilon_greedy/test_standard.py
+ python algorithms/epsilon_greedy/test_annealing.py
+ python algorithms/softmax/test_standard.py
+ python algorithms/softmax/test_annealing.py
+ python algorithms/ucb/test_ucb1.py
+ python algorithms/exp3/test_exp3.py
+ cd ..
 
 # Use R for generating graphs
 

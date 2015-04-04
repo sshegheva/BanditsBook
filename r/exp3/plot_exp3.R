@@ -1,7 +1,7 @@
 library("plyr")
 library("ggplot2")
 
-results <- read.csv("julia/algorithms/exp3/exp3_results.csv", header = FALSE)
+results <- read.csv("python/algorithms/exp3/exp3_results.csv", header = FALSE)
 names(results) <- c("Gamma", "Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 results <- transform(results, Gamma = factor(Gamma))
 

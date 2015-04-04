@@ -1,7 +1,9 @@
 library("plyr")
 library("ggplot2")
 
-exp3.results <- read.csv("julia/env_demo.csv", header = FALSE)
+lang="python"
+
+exp3.results <- read.csv(paste0(lang,"julia/env_demo.csv"), header = FALSE)
 names(exp3.results) <- c("Gamma", "Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 exp3.results <- transform(exp3.results, Algorithm = paste(Gamma, "-Exp3", sep = ""))
 

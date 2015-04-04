@@ -1,28 +1,30 @@
 library("plyr")
 library("ggplot2")
 
-annealing.results <- read.csv("julia/algorithms/epsilon_greedy/annealing_results.csv", header = FALSE)
+lang="python"
+
+annealing.results <- read.csv(paste0(lang, "/algorithms/epsilon_greedy/annealing_results.csv"), header = FALSE)
 names(annealing.results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 annealing.results <- transform(annealing.results, Algorithm = "Annealing epsilon-Greedy")
 
-epsilon.results <- read.csv("julia/algorithms/epsilon_greedy/standard_results.csv", header = FALSE)
+epsilon.results <- read.csv(paste0(lang, "/algorithms/epsilon_greedy/standard_results.csv"), header = FALSE)
 names(epsilon.results) <- c("Epsilon", "Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 epsilon.results <- transform(epsilon.results, Algorithm = paste(Epsilon, "-Greedy", sep = ""))
 epsilon.results <- epsilon.results[, c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward", "Algorithm")]
 
-ucb1.results <- read.csv("julia/algorithms/ucb/ucb1_results.csv", header = FALSE)
+ucb1.results <- read.csv(paste0(lang, "julia/algorithms/ucb/ucb1_results.csv"), header = FALSE)
 names(ucb1.results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 ucb1.results <- transform(ucb1.results, Algorithm = "UCB1")
 
 # Annealing Softmax
-annealing.softmax.results <- read.csv("julia/algorithms/softmax/annealing_softmax_results.csv", header = FALSE)
+annealing.softmax.results <- read.csv(paste0(lang, "/algorithms/softmax/annealing_softmax_results.csv"), header = FALSE)
 names(annealing.softmax.results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 annealing.softmax.results <- transform(annealing.softmax.results, Algorithm = "Annealing Softmax")
 
 # Softmax
 
 # Exp3
-exp3.results <- read.csv("julia/algorithms/exp3/exp3_results.csv", header = FALSE)
+exp3.results <- read.csv(paste(lang0, "/algorithms/exp3/exp3_results.csv"), header = FALSE)
 names(exp3.results) <- c("Gamma", "Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 exp3.results <- transform(exp3.results, Algorithm = paste(Gamma, "-Exp3", sep = ""))
 exp3.results <- exp3.results[, c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward", "Algorithm")]

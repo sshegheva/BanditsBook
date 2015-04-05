@@ -12,7 +12,7 @@ names(epsilon.results) <- c("Epsilon", "Sim", "T", "ChosenArm", "Reward", "Cumul
 epsilon.results <- transform(epsilon.results, Algorithm = paste(Epsilon, "-Greedy", sep = ""))
 epsilon.results <- epsilon.results[, c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward", "Algorithm")]
 
-ucb1.results <- read.csv(paste0(lang, "julia/algorithms/ucb/ucb1_results.csv"), header = FALSE)
+ucb1.results <- read.csv(paste0(lang, "/algorithms/ucb/ucb1_results.csv"), header = FALSE)
 names(ucb1.results) <- c("Sim", "T", "ChosenArm", "Reward", "CumulativeReward")
 ucb1.results <- transform(ucb1.results, Algorithm = "UCB1")
 
